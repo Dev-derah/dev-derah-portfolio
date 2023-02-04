@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import styles from "../styles";
-import { slideIn, staggerContainer, textVariant } from "../utils/motion";
+import styles from '../styles';
+import { staggerContainer, textVariant } from '../utils/motion';
 
 const Hero = () => (
   // <section className={`${styles.yPaddings} sm:pl-16 pl-6 h-screen`}>
@@ -52,7 +52,7 @@ const Hero = () => (
   //   </motion.div>
   // </section>
   <section
-    className={"py-2 sm:pl-16 pl-6 h-screen w-screen overflow-hidden relative"}
+    className="py-2 sm:pl-16 pl-6 h-screen w-screen overflow-hidden relative"
   >
     <motion.div
       variants={staggerContainer}
@@ -79,14 +79,15 @@ const Hero = () => (
     </motion.div>
     <motion.div className="h-[90vh] w-screen">
       <div>
-        <div class="absolute w-11/12 h-[300px] hero-gradient rounded-tl-[140px]  z-[10] bottom-[10%] right-0" />
+        <div className="absolute w-11/12 h-[300px] hero-gradient rounded-tl-[140px]  z-[10] bottom-[10%] right-0" />
         <img
           src="/dev-derah.png"
           className=" absolute bottom-[10%] z-40 right-1/2 translate-x-1/2 h-3/5 object-cover"
         />
-        
-        <motion.div 
-        className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] absolute z-0 lg:mr-2">
+
+        <motion.div
+          className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] absolute z-0 lg:mr-2"
+        >
           <img
             src="/stamp.png"
             alt="stamp"
