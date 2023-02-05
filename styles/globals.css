@@ -10,6 +10,11 @@
   scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
