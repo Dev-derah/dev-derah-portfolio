@@ -7,7 +7,7 @@ import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 const Hero = () => (
   <section
-    className={`${styles.yPaddings} h-screen md:py-6 hero-section`}
+    className={`${styles.yPaddings} h-[90vh] md:py-6 hero-section`}
   >
     <motion.div
       variants={staggerContainer}
@@ -31,7 +31,7 @@ const Hero = () => (
 
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className={`${styles.heroImage}absolute h-[70vh] w-screen md:-mt-[100px] -mt-[12px] bottom-4`}
+        className={`${styles.heroImage}absolute h-[70vh] w-screen md:-mt-[100px] -mt-[12px] bottom-4 lg:mx-auto`}
       >
         <div className="absolute w-11/12 h-[300px] hero-gradient rounded-tl-[140px]  z-[10] bottom-[1rem] right-0" />
         <img
