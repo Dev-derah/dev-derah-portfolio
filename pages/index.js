@@ -10,9 +10,6 @@ const Home = () => (
       <div className="gradient-03 z-0" />
       <Projects />
     </div>
-    <div className="relative overflow-hidden">
-      <div className="gradient-04 z-0" />
-    </div>
     <Footer />
   </div>
 );
