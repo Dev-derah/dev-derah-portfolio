@@ -6,8 +6,8 @@ const Home = () => (
     <Navbar />
     <Hero />
     <div className="relative">
-      <About />
-      <div className="gradient-03 z-0" />
+      <About className="overflow-hidden" />
+      <div className="" />
       <Projects />
     </div>
     <Footer />

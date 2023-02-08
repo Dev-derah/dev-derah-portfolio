@@ -10,6 +10,7 @@ const Page = () => (
       <div className="gradient-03 z-0" />
       <Projects />
     </div>
+    <div className="gradient-04 z-0" />
     <Footer />
   </div>
 );
