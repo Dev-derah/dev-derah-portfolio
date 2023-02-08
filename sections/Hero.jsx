@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 import styles from '../styles';
-import { slideIn, staggerContainer, textVariant } from '../utils/motion';
+import { fadeIn, staggerContainer, textVariant } from '../utils/motion';
 
 const Hero = () => (
   <section className={`${styles.yPaddings} h-[100vh] md:py-6 hero-section`}>
@@ -28,7 +28,7 @@ const Hero = () => (
       </div>
 
       <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
+        variants={fadeIn('right', 'tween', 0.2, 1)}
         className={`${styles.heroImage} absolute h-[70vh] w-screen md:-mt-[100px] -mt-[12px] bottom-4 lg:mx-auto`}
       >
         <div className="absolute w-11/12 h-[300px] hero-gradient rounded-tl-[140px]  z-[10] bottom-[1rem] right-0" />
