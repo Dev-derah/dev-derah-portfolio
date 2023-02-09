@@ -13,9 +13,8 @@ const Navbar = () => (
     className={`${styles.xPaddings} py-8 relative`}
   >
     <div className="absolute w-[50%] inset-0 gradient-01" />
-    <div
-      className={`${styles.innerWidth} mx-auto flex justify-end gap-8`}
-    >
+    <div className={`${styles.innerWidth} mx-auto flex justify-between items-center gap-8`}>
+      <img src="/my_logo.png" className="h-16 " />
       <img
         src="/menu.svg"
         alt="menu"
