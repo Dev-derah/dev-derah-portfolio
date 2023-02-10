@@ -17,14 +17,10 @@ const Projects = () => (
     >
       <TypingText title="| Projects" textStyles="text-center" />
       <TitleText
-        title={(
-          <>
-            A collection of my most recent <br className="md:block hidden" />{' '}
-            Projects
-          </>
-        )}
+        title={<>A collection of my most recent Projects</>}
         textStyles="text-center"
       />
+
       {/* <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (
             <ProjectCard
@@ -36,27 +32,69 @@ const Projects = () => (
             />
           ))}
         </div> */}
-
-      <motion.div
-        variants={fadeIn('right', 'tween', 0.2, 1)}
-        className="flex-[0.5] lg:max-w-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] relative"
-      >
-        <div className="feedback-gradient" />
-        <div>
-          <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
-            Samantha
-          </h4>
-          <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
-            Founder Metaverus
-          </p>
-        </div>
-
-        <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-          “With the development of today's technology, metaverse is very useful
-          for today's work, or can be called web 3.0. by using metaverse you can
-          use it as anything”
-        </p>
-      </motion.div>
+      <div className="feedback-gradient" />
+      <div className="flex flex-col gap-y-16 items-center justify-center">
+        <motion.div
+          variants={fadeIn('right', 'tween', 0.2, 1)}
+          className="glassmorphism flex-[0.5] items-center md:h-60 lg:h-80 lg:max-h-[900px] lg:w-80  flex flex-col justify-center gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
+        >
+          <div className="uppercase justify-center [writing-mode:tb-rl] gap-2 text-gray-400 hidden text-xs md:flex h-[400px]">
+            <p>Typescript</p>
+            <p>Tailwind css</p>
+            <p>Sanity io</p>
+            <p>Framer motion</p>
+          </div>
+          <div className="h-4/5 md:h-[400px] max-w-[500px]">
+            <img
+              src="/samplePhoto.jpg"
+              className="h-full rounded-[32px] w-full lg:max-h-[500px]"
+            />
+            {/* <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
+              Samantha
+            </h4>
+            <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
+              Founder Metaverus
+            </p> */}
+          </div>
+          <div className="h-full flex flex-col  items-center text-start ">
+            <h3 className="text-3xl text-white font-black">Banky Web app</h3>
+            {/* <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
+              “With the development of today's technology, metaverse is very”
+            </p> */}
+            <p>View website</p>
+          </div>
+        </motion.div>
+        <motion.div
+          variants={fadeIn('right', 'tween', 0.2, 1)}
+          className="glassmorphism flex-[0.5] items-center md:h-60 lg:h-80 lg:max-h-[900px] lg:w-60  flex flex-col justify-center gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
+        >
+          <div className="uppercase justify-center [writing-mode:tb-rl] gap-2 text-gray-400 hidden text-xs md:flex h-[400px]">
+            <p>Typescript</p>
+            <p>Tailwind css</p>
+            <p>Sanity io</p>
+            <p>Framer motion</p>
+          </div>
+          <div className="h-4/5 md:h-[400px] max-w-[500px]">
+            <img
+              src="/samplePhoto.jpg"
+              className="h-full rounded-[32px] w-full lg:max-h-[500px]"
+            />
+            {/* <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
+              Samantha
+            </h4>
+            <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
+              Founder Metaverus
+            </p> */}
+          </div>
+          <div className="h-full flex flex-col items-center text-start ">
+            <h3 className="text-3xl text-white font-black">Banky Web</h3>
+            {/* <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
+              “With the development of today's technology, metaverse is very”
+            </p> */}
+            <p>View website</p>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   </section>
 );

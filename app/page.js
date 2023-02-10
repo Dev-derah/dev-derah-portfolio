@@ -3,8 +3,11 @@ import { About, Projects, Hero } from '../sections';
 
 const Page = () => (
   <div className="bg-primary-black">
-    <Navbar />
-    <Hero />
+    <div className=" h-screen">
+      <Navbar />
+      <Hero />
+    </div>
+
     <div className="relative">
       <About />
       <div className="gradient-03 z-0" />
