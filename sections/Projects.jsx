@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 'use client';
 
 // import { useState } from 'react';
@@ -35,8 +37,8 @@ const Projects = () => (
       <div className="feedback-gradient" />
       <div className="flex flex-col gap-y-16 items-center justify-center">
         <motion.div
-          variants={fadeIn('right', 'tween', 0.2, 1)}
-          className="glassmorphism flex-[0.5] items-center md:h-60 lg:h-80 lg:max-h-[900px] lg:w-80  flex flex-col justify-center gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
         >
           <div className="uppercase justify-center [writing-mode:tb-rl] gap-2 text-gray-400 hidden text-xs md:flex h-[400px]">
             <p>Typescript</p>
@@ -44,29 +46,23 @@ const Projects = () => (
             <p>Sanity io</p>
             <p>Framer motion</p>
           </div>
-          <div className="h-4/5 md:h-[400px] max-w-[500px]">
+          <div className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
             <img
               src="/samplePhoto.jpg"
-              className="h-full rounded-[32px] w-full lg:max-h-[500px]"
+              className="h-[300px] w-[200px] rounded-[32px] md:h-[400px] md:w-300px lg:w-full lg:max-h-[500px]"
             />
-            {/* <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
-              Samantha
-            </h4>
-            <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
-              Founder Metaverus
-            </p> */}
           </div>
-          <div className="h-full flex flex-col  items-center text-start ">
-            <h3 className="text-3xl text-white font-black">Banky Web app</h3>
-            {/* <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-              “With the development of today's technology, metaverse is very”
-            </p> */}
-            <p>View website</p>
+          <div className=" flex flex-wrap flex-col md:w-60 lg:h-[300px] text-left items-center md:items-start justify-center ">
+            <h3 className="text-3xl text-white font-black">Banky </h3>
+            <a href="#">
+              <h4>View website</h4>
+            </a>
           </div>
         </motion.div>
+
         <motion.div
-          variants={fadeIn('right', 'tween', 0.2, 1)}
-          className="glassmorphism flex-[0.5] items-center md:h-60 lg:h-80 lg:max-h-[900px] lg:w-60  flex flex-col justify-center gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
         >
           <div className="uppercase justify-center [writing-mode:tb-rl] gap-2 text-gray-400 hidden text-xs md:flex h-[400px]">
             <p>Typescript</p>
@@ -74,24 +70,17 @@ const Projects = () => (
             <p>Sanity io</p>
             <p>Framer motion</p>
           </div>
-          <div className="h-4/5 md:h-[400px] max-w-[500px]">
+          <div className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
             <img
-              src="/samplePhoto.jpg"
-              className="h-full rounded-[32px] w-full lg:max-h-[500px]"
+              src="/placeholder.jpg"
+              className="h-[300px] w-[200px] rounded-[32px] md:h-[400px] md:w-300px lg:w-full lg:max-h-[500px]"
             />
-            {/* <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
-              Samantha
-            </h4>
-            <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
-              Founder Metaverus
-            </p> */}
           </div>
-          <div className="h-full flex flex-col items-center text-start ">
-            <h3 className="text-3xl text-white font-black">Banky Web</h3>
-            {/* <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-              “With the development of today's technology, metaverse is very”
-            </p> */}
-            <p>View website</p>
+          <div className=" flex flex-wrap flex-col md:w-60 lg:h-[300px] text-left items-center md:items-start justify-center ">
+            <h3 className="text-3xl text-white font-black">Banky</h3>
+            <a href="#">
+              <h4>View website</h4>
+            </a>
           </div>
         </motion.div>
       </div>
