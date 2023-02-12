@@ -120,3 +120,34 @@ box-shadow: 5px 6px 24px 0px rgba(0,0,0,0.24);
     #34acc7 53.65%,
     #a134c7 100%);
 }
+
+.project-title{
+  background: -webkit-linear-gradient(    97.86deg,
+    #34acc7 53.65%,#65c4fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.website_link{
+
+}
+
+.website_link:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-top: 1rem;
+  border: 0.5px solid #34acc7;
+  width: 0;
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+.website_link:hover:after{
+  opacity: 1;
+  width: 100%;
+}
+.website_link:hover{
+color: white;
+}
