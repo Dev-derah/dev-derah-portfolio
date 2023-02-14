@@ -1,47 +1,46 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-import styles from '../styles';
 import { fadeIn } from '../utils/motion';
 
-const ProjectCard = ({ id, imgUrl, title, index, active, handleClick }) => (
+const ProjectCard = ({ project }) => (
   <motion.div
-    variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-    className={`relative ${
-      active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-    } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
-    onClick={() => handleClick(id)}
+    variants={fadeIn('right', 'tween', 0.2, 0.5)}
+    className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
   >
-    <img
-      src={imgUrl}
-      alt="planet-04"
-      className="absolute w-full h-full object-cover rounded-[24px]"
-    />
-    {active !== id ? (
-      <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
-        {title}
+    <div className="uppercase justify-center [writing-mode:tb-rl] gap-2 text-gray-400 hidden text-xs md:flex h-[400px]">
+      <p>Typescript</p>
+      <p>Tailwind css</p>
+      <p>Sanity io</p>
+      <p>Framer motion</p>
+    </div>
+    <div
+      className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]"
+    >
+      <img
+        src="/samplePhoto.jpg"
+        className="h-[300px] w-[200px] rounded-[32px] md:h-[400px] md:w-300px lg:w-full lg:max-h-[500px]"
+      />
+    </div>
+    <div className=" flex flex-wrap md:gap-y-6 flex-col md:w-60 lg:h-[300px] text-left items-center md:items-start justify-center ">
+      <h3 className="project-title text-3xl text-white font-black">
+        {project.title}
       </h3>
-    ) : (
-      <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-        <div
-          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
-        >
-          <img
-            src="/headset.svg"
-            alt="headset"
-            className="w-1/2 h-1/2 object-contain"
-          />
-        </div>
-        <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
-          Enter Metaverse
-        </p>
-        <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
-          {title}
-        </h2>
+      <div className="md:gap-y-4">
+        <a href="dev-derah.vercel.app">
+          <h4 className="website_link relative text-gray-400 my-1">
+            View website
+          </h4>
+        </a>
+        <a href="dev-derah.vercel.app">
+          <h4 className="website_link relative text-gray-400 ">
+            Source Code
+          </h4>
+        </a>
       </div>
-    )}
+    </div>
   </motion.div>
 );
 
 export default ProjectCard;
+

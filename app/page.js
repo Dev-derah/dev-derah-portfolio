@@ -7,7 +7,6 @@ const Page = () => (
       <Navbar />
       <Hero />
     </div>
-
     <div className="relative">
       <About />
       <div className="gradient-03 z-0" />

@@ -1,5 +1,5 @@
 import { Footer, Navbar } from '../components';
-import { About, Projects, Hero } from '../sections';
+import { About, Projects, Hero, Skills } from '../sections';
 
 const Home = () => (
   <div className="bg-primary-black overflow-x-hidden">
@@ -7,7 +7,7 @@ const Home = () => (
     <Hero />
     <div className="relative">
       <About className="overflow-hidden" />
-      <div className="" />
+      <Skills />
       <Projects />
     </div>
     <Footer />
