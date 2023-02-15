@@ -5,8 +5,9 @@ import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
 import { TypingText } from '../components/CustomTexts';
 import Skill from '../components/Skill';
+import { urlFor } from '../sanity';
 
-const Skills = () => (
+const Skills = ({ skills }) => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
       variants={staggerContainer}
@@ -18,7 +19,10 @@ const Skills = () => (
       <TypingText title="| My Skill Set" textStyles="text-center" />
 
       <div className="uppercase text-white grid grid-cols-2 justify-items-center gap-5 md:grid-cols-3 lg:grid-cols-4 mt-8 w-full text-center">
-        <Skill title="React" />
+        {skills.map((skill) => (
+          // eslint-disable-next-line no-underscore-dangle
+          <Skill key={skill._id} title={skill.title} logo={urlFor(skill.logo)} />
+        ))}
       </div>
     </motion.div>
   </section>

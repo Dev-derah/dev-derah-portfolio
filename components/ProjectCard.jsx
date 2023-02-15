@@ -9,14 +9,12 @@ const ProjectCard = ({ project }) => (
     className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
   >
     <div className="uppercase justify-center [writing-mode:tb-rl] gap-2 text-gray-400 hidden text-xs md:flex h-[400px]">
-      <p>Typescript</p>
-      <p>Tailwind css</p>
-      <p>Sanity io</p>
-      <p>Framer motion</p>
+      {project.techStack.map((tech, index) => (
+        <p key={index}>{tech}</p>
+      ))}
+
     </div>
-    <div
-      className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]"
-    >
+    <div className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
       <img
         src="/samplePhoto.jpg"
         className="h-[300px] w-[200px] rounded-[32px] md:h-[400px] md:w-300px lg:w-full lg:max-h-[500px]"
@@ -33,9 +31,7 @@ const ProjectCard = ({ project }) => (
           </h4>
         </a>
         <a href="dev-derah.vercel.app">
-          <h4 className="website_link relative text-gray-400 ">
-            Source Code
-          </h4>
+          <h4 className="website_link relative text-gray-400 ">Source Code</h4>
         </a>
       </div>
     </div>

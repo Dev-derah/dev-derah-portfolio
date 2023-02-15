@@ -15,21 +15,19 @@ const data = [
     id: 1,
     title: 'Banky',
     imgage: { demowebsite },
+    techStack: ['React', 'sanity', 'scss', 'framer motion'],
   },
   {
-    id: 1,
+    id: 2,
     title: 'Banky web app',
     imgage: { demowebsite2 },
+    techStack: ['React', 'sanity', 'scss', 'framer motion'],
   },
   {
-    id: 1,
+    id: 3,
     title: 'lender sqr',
     imgage: { demowebsite },
-  },
-  {
-    id: 1,
-    title: 'cash app',
-    imgage: { demowebsite },
+    techStack: ['Typescript', 'scss', 'framer motion'],
   },
 ];
 

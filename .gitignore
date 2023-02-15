@@ -39,4 +39,4 @@ next-env.d.ts
 .vscode
 
 #sanity
-/sanity/node_modules
+sanity/node_modules

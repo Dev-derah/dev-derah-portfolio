@@ -1,13 +1,14 @@
 import { Footer, Navbar } from '../components';
 import { About, Projects, Hero, Skills } from '../sections';
+import { fetchSkills } from '../utils/fetchSkill';
 
-const Home = () => (
+const Home = ({ skills }) => (
   <div className="bg-primary-black overflow-x-hidden">
     <Navbar />
     <Hero />
     <div className="relative">
       <About className="overflow-hidden" />
-      <Skills />
+      <Skills skills={skills} />
       <Projects />
     </div>
     <Footer />
@@ -15,3 +16,13 @@ const Home = () => (
 );
 
 export default Home;
+
+export const getStaticProps = async () => {
+  const skills = await fetchSkills();
+  return {
+    props: {
+      skills,
+    },
+    revalidate: 10,
+  };
+};
