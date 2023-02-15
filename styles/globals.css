@@ -195,10 +195,6 @@ color: white;
   bottom: 0;
   margin: auto;
 }
-.badge .circle i.fa {
-  font-size: 2em;
-  margin-top: 8px;
-}
 .badge .font {
   display: inline-block;
   margin-top: 1em;
