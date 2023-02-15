@@ -20,7 +20,6 @@ const Skills = ({ skills }) => (
 
       <div className="uppercase text-white grid grid-cols-2 justify-items-center gap-5 md:grid-cols-3 lg:grid-cols-4 mt-8 w-full text-center">
         {skills.map((skill) => (
-          // eslint-disable-next-line no-underscore-dangle
           <Skill key={skill._id} title={skill.title} logo={urlFor(skill.logo)} />
         ))}
       </div>

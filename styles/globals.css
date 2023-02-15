@@ -187,7 +187,6 @@ color: white;
   width: 60px;
   height: 60px;
   position: absolute;
-  background: #fff;
   z-index: 10;
   border-radius: 50%;
   top: 0;
@@ -221,18 +220,6 @@ color: white;
   text-transform: uppercase;
   background: linear-gradient(to bottom right, #555 0%, #333 100%);
   cursor: default;
-}
-.purple {
-  background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
-  color: #7127a8;
-}
-.teal {
-  background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
-  color: #34a297;
-}
-.gold {
-  background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
-  color: #b7892b;
 }
 .silver {
   background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
