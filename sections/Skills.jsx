@@ -5,7 +5,7 @@ import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
 import { TypingText } from '../components/CustomTexts';
 import Skill from '../components/Skill';
-import { urlFor } from '../sanity';
+import { urlFor } from '../lib/sanity.client';
 
 const Skills = ({ skills }) => (
   <section className={`${styles.paddings} relative z-10`}>
