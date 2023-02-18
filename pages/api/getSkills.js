@@ -3,7 +3,7 @@ import { sanityClient } from '../../lib/sanity.client';
 
 const query = groq`*[_type == "skill"]`;
 
-export default async function handler() {
+export default async function handler(req, res) {
   const skills = await sanityClient.fetch(query);
-  return skills;
+  res.status(200).json({ skills });
 }
