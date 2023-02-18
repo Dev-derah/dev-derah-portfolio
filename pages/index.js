@@ -1,5 +1,6 @@
 import { Footer, Navbar } from '../components';
 import { About, Projects, Hero, Skills } from '../sections';
+// import { fetchSkills } from '../utils/fetchSkill';
 
 const Home = () => (
   <div className="bg-primary-black overflow-x-hidden">
@@ -15,3 +16,14 @@ const Home = () => (
 );
 
 export default Home;
+
+// export const getStaticProps = async () => {
+//   const skills = await fetchSkills();
+//   console.log(skills);
+//   return {
+//     props: {
+//       skills,
+//     },
+//     revalidate: 10,
+//   };
+// };
