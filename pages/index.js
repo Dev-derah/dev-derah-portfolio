@@ -19,7 +19,6 @@ export default Home;
 
 export const getStaticProps = async () => {
   const skills = await fetchSkills();
-  console.log(skills);
   return {
     props: {
       skills,

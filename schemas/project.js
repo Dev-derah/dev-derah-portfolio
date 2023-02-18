@@ -22,7 +22,11 @@ export default defineType({
       name: 'techstack',
       title: 'Techstack',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [
+        { type: 'reference',
+          to: [{ type: 'skill' }],
+        },
+      ],
     }),
   ],
 });
