@@ -8,7 +8,7 @@ import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
 import { TitleText, TypingText } from '../components';
 
-const Projects = ({ projects }) => (
+const Projects = () => (
   <section className={`${styles.paddings}`} id="explore">
     <motion.div
       variants={staggerContainer}
@@ -23,10 +23,7 @@ const Projects = ({ projects }) => (
         textStyles="text-center"
       />
       <div className="feedback-gradient" />
-      <div className="project-card__middle flex flex-col gap-y-16 items-center justify-center">
-        {console.log(projects)}
-
-      </div>
+      <div className="project-card__middle flex flex-col gap-y-16 items-center justify-center" />
     </motion.div>
   </section>
 );
