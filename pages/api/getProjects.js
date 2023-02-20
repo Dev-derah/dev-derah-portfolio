@@ -8,6 +8,6 @@ const query = groq`*[_type == "project"]{
 
 export default async function handler(req, res) {
   const projects = await sanityClient.fetch(query);
-  res.status(200).json({ projects });
+  res.status(200).json(projects);
   return projects;
 }
