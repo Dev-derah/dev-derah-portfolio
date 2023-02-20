@@ -6,32 +6,9 @@
 import { motion } from 'framer-motion';
 import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
-import { ProjectCard, TitleText, TypingText } from '../components';
-import demowebsite from '../public/demowebsite.png';
-import demowebsite2 from '../public/placeholder.jpg';
+import { TitleText, TypingText } from '../components';
 
-const data = [
-  {
-    id: 1,
-    title: 'Banky',
-    imgage: { demowebsite },
-    techStack: ['React', 'sanity', 'scss', 'framer motion'],
-  },
-  {
-    id: 2,
-    title: 'Banky web app',
-    imgage: { demowebsite2 },
-    techStack: ['React', 'sanity', 'scss', 'framer motion'],
-  },
-  {
-    id: 3,
-    title: 'lender sqr',
-    imgage: { demowebsite },
-    techStack: ['Typescript', 'scss', 'framer motion'],
-  },
-];
-
-const Projects = () => (
+const Projects = ({ projects }) => (
   <section className={`${styles.paddings}`} id="explore">
     <motion.div
       variants={staggerContainer}
@@ -47,7 +24,8 @@ const Projects = () => (
       />
       <div className="feedback-gradient" />
       <div className="project-card__middle flex flex-col gap-y-16 items-center justify-center">
-        {data.map((project) => <ProjectCard key={project.id} project={project} />)}
+        {console.log(projects)}
+
       </div>
     </motion.div>
   </section>
