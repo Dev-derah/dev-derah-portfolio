@@ -3,14 +3,14 @@ import { About, Projects, Hero, Skills } from '../sections';
 import { fetchProjecsts } from '../utils/fetchProjects';
 import { fetchSkills } from '../utils/fetchSkills';
 
-const Home = () => (
+const Home = ({ skills, projects }) => (
   <div className="bg-primary-black overflow-x-hidden">
     <Navbar />
     <Hero />
     <div className="relative">
       <About className="overflow-hidden" />
-      <Skills />
-      <Projects />
+      <Skills skills={skills} />
+      <Projects projects={projects} />
     </div>
     <Footer />
   </div>

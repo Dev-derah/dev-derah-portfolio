@@ -6,9 +6,9 @@
 import { motion } from 'framer-motion';
 import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
-import { TitleText, TypingText } from '../components';
+import { ProjectCard, TitleText, TypingText } from '../components';
 
-const Projects = () => (
+const Projects = ({ projects }) => (
   <section className={`${styles.paddings}`} id="explore">
     <motion.div
       variants={staggerContainer}
@@ -23,7 +23,10 @@ const Projects = () => (
         textStyles="text-center"
       />
       <div className="feedback-gradient" />
-      <div className="project-card__middle flex flex-col gap-y-16 items-center justify-center" />
+      <div className="project-card__middle flex flex-col gap-y-16 items-center justify-center">
+        {projects.map((project) => <ProjectCard key={project.id} project={project} />)}
+
+      </div>
     </motion.div>
   </section>
 );
