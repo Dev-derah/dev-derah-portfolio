@@ -25,7 +25,7 @@ const Footer = () => (
         >
           <img
             src="/chat.svg"
-            alt="headset"
+            alt="chat bubbles"
             className="w-[24px] h-[24px] object-contain"
           />
           <span className="font-normal text-[16px] text-white">Lets talk</span>

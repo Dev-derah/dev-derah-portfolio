@@ -6,7 +6,7 @@ import { urlFor } from '../lib/sanity.client';
 
 const ProjectCard = ({ project }) => (
   <motion.div
-    variants={fadeIn('right', 'tween', 0, 0.5)}
+    variants={fadeIn('right', 'tween', 0.5, 1)}
     className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
   >
     <div className="uppercase justify-center gap-2 [writing-mode:tb-rl]  text-gray-400 hidden text-xs md:flex h-[400px]">
