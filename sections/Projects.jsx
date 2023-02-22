@@ -24,7 +24,7 @@ const Projects = ({ projects }) => (
       />
       <div className="feedback-gradient" />
       <div className="project-card__middle flex flex-col gap-y-16 items-center justify-center">
-        {projects.map((project) => <ProjectCard key={project.id} project={project} />)}
+        {projects.map((project) => <ProjectCard key={project._id} project={project} />)}
 
       </div>
     </motion.div>

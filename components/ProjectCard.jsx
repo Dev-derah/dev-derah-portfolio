@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { fadeIn } from '../utils/motion';
 import { urlFor } from '../lib/sanity.client';
 
@@ -11,12 +12,14 @@ const ProjectCard = ({ project }) => (
   >
     <div className="uppercase justify-center gap-2 [writing-mode:tb-rl]  text-gray-400 hidden text-xs md:flex h-[400px]">
       {project.techstack.map((tech) => (
-        <p className="tracking-widest">{tech.title}</p>
+        <p className="tracking-widest" key={tech.title}>{tech.title}</p>
       ))}
     </div>
     <div className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
-      <img
+      <Image
         src={urlFor(project.image).url()}
+        height={300}
+        width={200}
         alt="project"
         className="h-[300px] w-[200px] rounded-[32px] md:h-[400px] md:w-300px lg:w-full lg:max-h-[500px]"
       />

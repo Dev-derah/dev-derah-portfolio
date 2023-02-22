@@ -36,6 +36,7 @@ const Hero = () => (
         <div className="absolute w-11/12 h-[17em] hero-gradient rounded-tl-[140px]  z-[10] bottom-[1rem] right-0 2xl:bottom-20 " />
         <img
           src="/dev-derah.png"
+          alt="dev-derah"
           className=" absolute bottom-[1rem] h-[55%] z-10 right-1/2 translate-x-1/2 object-cover her0-image 2xl:bottom-20"
         />
       </motion.div>

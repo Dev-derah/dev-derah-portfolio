@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { socials } from '../constants';
 
 import styles from '../styles';
@@ -23,9 +24,11 @@ const Footer = () => (
           type="button"
           className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] cursor-pointer"
         >
-          <img
+          <Image
             src="/chat.svg"
-            alt="chat bubbles"
+            alt="chat"
+            width={24}
+            height={24}
             className="w-[24px] h-[24px] object-contain"
           />
           <span className="font-normal text-[16px] text-white">Lets talk</span>
@@ -39,8 +42,10 @@ const Footer = () => (
           <h4 className="font-extrabold text-[24px] text-white">Contact Me</h4>
           <div className="flex gap-4">
             {socials.map((social) => (
-              <img
+              <Image
                 key={social.name}
+                height={24}
+                width={24}
                 src={social.url}
                 alt={social.name}
                 className="w-[24px] h-[24px] object-contain cursor-pointer"
