@@ -50,7 +50,7 @@ const ProjectCard = ({ project }) => {
             <h4 className="website_link relative text-gray-400 ">Source Code</h4>
           </a>
         </div>
-        <div className="diss_container" />
+        <div className="diss_container relative" />
       </div>
     </motion.div>
   );

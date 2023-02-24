@@ -218,4 +218,5 @@ color: white;
 }
 canvas{
   border-radius: 32px;
+  position: absolute;
 }
