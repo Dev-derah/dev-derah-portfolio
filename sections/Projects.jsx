@@ -10,11 +10,12 @@ import styles from '../styles';
 import { ProjectCard, TitleText, TypingText } from '../components';
 
 const Projects = ({ projects }) => {
-  Array.from(document.querySelectorAll('.glassmorphism ')).forEach((el) => {
+  Array.from(document.querySelectorAll('.diss ')).forEach((el) => {
+    console.log(el);
     // eslint-disable-next-line no-new, new-cap
     // eslint-disable-next-line no-unused-vars, camelcase, new-cap, no-undef
     const image_animate = new hoverEffect({
-      parent: document.querySelector('.diss'),
+      parent: el,
       intensity: 0.3,
       image1: el.dataset.img1,
       image2: el.dataset.img2,
