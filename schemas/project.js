@@ -27,6 +27,22 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'websiteLink',
+      title: 'WebsiteLink',
+      type: 'url',
+      validation: (Rule) => Rule.uri({
+        scheme: ['http', 'https', 'mailto', 'tel'],
+      }),
+    }),
+    defineField({
+      name: 'githubLink',
+      title: 'GithubLink',
+      type: 'url',
+      validation: (Rule) => Rule.uri({
+        scheme: ['http', 'https', 'mailto', 'tel'],
+      }),
+    }),
+    defineField({
       name: 'techstack',
       title: 'Techstack',
       type: 'array',
