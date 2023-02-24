@@ -1,3 +1,5 @@
+/* eslint-disable react/self-closing-comp */
+
 'use client';
 
 import hoverEffect from 'hover-effect';
@@ -20,14 +22,17 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       variants={fadeIn('right', 'tween', 0.5, 1)}
-      className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
+      className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative overflow-hidden"
     >
       <div className="uppercase justify-center gap-2 [writing-mode:tb-rl]  text-gray-400 hidden text-xs md:flex h-[400px]">
         {project.techstack.map((tech) => (
-          <p className="tracking-widest" key={tech.title}>{tech.title}</p>
+          <p className="tracking-widest" key={tech.title}>
+            {tech.title}
+          </p>
         ))}
       </div>
-      <div className={`diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px] ${project.name}`}>
+      <div className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
+        <div className={project.name}></div>
         {/* <Image
           src={urlFor(project.image).url()}
           height={300}
@@ -47,7 +52,9 @@ const ProjectCard = ({ project }) => {
             </h4>
           </a>
           <a href="dev-derah.vercel.app">
-            <h4 className="website_link relative text-gray-400 ">Source Code</h4>
+            <h4 className="website_link relative text-gray-400 ">
+              Source Code
+            </h4>
           </a>
         </div>
       </div>
