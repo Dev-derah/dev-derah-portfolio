@@ -4,6 +4,7 @@
 
 // import { useState } from 'react';
 import hoverEffect from 'hover-effect';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
@@ -12,18 +13,16 @@ import { ProjectCard, TitleText, TypingText } from '../components';
 const Projects = ({ projects }) => {
   Array.from(document.querySelectorAll('.diss')).forEach(
     (el) => {
-      const imgs = Array.from(el.querySelectorAll('img'));
       // eslint-disable-next-line no-new, new-cap
-      new hoverEffect({
-        parent: el,
-        intensity: 0.2,
-        speedIn: el.dataset.speedin,
-        speedOut: el.dataset.speedout,
-        easing: el.dataset.easing,
-        hover: el.dataset.hover,
-        image1: imgs[0].getAttribute('src'),
-        image2: imgs[1].getAttribute('src'),
-        displacementImage: el.dataset.displacement,
+      useEffect(() => {
+        // eslint-disable-next-line no-unused-vars, camelcase, new-cap, no-undef
+        const image_animate = new hoverEffect({
+          parent: el,
+          intensity: 0.3,
+          image1: el.dataset.img1,
+          image2: el.dataset.img2,
+          displacementImage: './smoke.png',
+        });
       });
     },
   );

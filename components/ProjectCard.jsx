@@ -1,5 +1,3 @@
-/* eslint-disable react/self-closing-comp */
-
 'use client';
 
 import { motion } from 'framer-motion';
@@ -18,9 +16,11 @@ const ProjectCard = ({ project }) => (
         </p>
       ))}
     </div>
-    <div className=" diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
-      <img src={urlFor(project.image).url()} alt={project.title} />
-      <img src={urlFor(project.hoverImage).url()} alt={project.title} />
+    <div
+      className=" diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]"
+      data-img1={urlFor(project.image).url()}
+      data-img2={urlFor(project.hoverImage).url()}
+    >
       {/* <Image
           src={urlFor(project.image).url()}
           height={300}
