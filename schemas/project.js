@@ -20,7 +20,7 @@ export default defineType({
     }),
     defineField({
       name: 'hoverImage',
-      title: 'hoverImage',
+      title: 'HoverImage',
       type: 'image',
       options: {
         hotspot: true,
