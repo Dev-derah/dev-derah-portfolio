@@ -4,28 +4,23 @@
 
 // import { useState } from 'react';
 import hoverEffect from 'hover-effect';
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer } from '../utils/motion';
 import styles from '../styles';
 import { ProjectCard, TitleText, TypingText } from '../components';
 
 const Projects = ({ projects }) => {
-  Array.from(document.querySelectorAll('.diss')).forEach(
-    (el) => {
-      // eslint-disable-next-line no-new, new-cap
-      useEffect(() => {
-        // eslint-disable-next-line no-unused-vars, camelcase, new-cap, no-undef
-        const image_animate = new hoverEffect({
-          parent: el,
-          intensity: 0.3,
-          image1: el.dataset.img1,
-          image2: el.dataset.img2,
-          displacementImage: './smoke.png',
-        });
-      });
-    },
-  );
+  Array.from(document.querySelectorAll('.glassmorphism ')).forEach((el) => {
+    // eslint-disable-next-line no-new, new-cap
+    // eslint-disable-next-line no-unused-vars, camelcase, new-cap, no-undef
+    const image_animate = new hoverEffect({
+      parent: document.querySelector('.diss'),
+      intensity: 0.3,
+      image1: el.dataset.img1,
+      image2: el.dataset.img2,
+      displacementImage: './smoke.png',
+    });
+  });
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
