@@ -15,7 +15,9 @@ const Home = ({ skills, projects }) => {
 
   return (
     <div>
-      {isloading ? <Loading /> : (
+      {isloading ? (
+        <Loading />
+      ) : (
         <div className="bg-primary-black overflow-x-hidden">
           <Navbar />
           <Hero />

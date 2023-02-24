@@ -216,4 +216,6 @@ color: white;
   background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
   color: #9e9e9e;
 }
-
+canvas{
+  border-radius: 32px;
+}

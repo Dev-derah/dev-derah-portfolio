@@ -19,6 +19,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'hoverImage',
+      title: 'hoverImage',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'techstack',
       title: 'Techstack',
       type: 'array',
