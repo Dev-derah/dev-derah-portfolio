@@ -35,12 +35,12 @@ const ProjectCard = ({ project }) => {
           {project.name}
         </h3>
         <div className="md:gap-y-4">
-          <a href="dev-derah.vercel.app">
+          <a href={project.websiteLink}>
             <h4 className="website_link relative text-gray-400 my-1">
               View website
             </h4>
           </a>
-          <a href="dev-derah.vercel.app">
+          <a href={project.githubLink}>
             <h4 className="website_link relative text-gray-400 ">Source Code</h4>
           </a>
         </div>
