@@ -3,7 +3,7 @@ import { sanityClient } from '../../lib/sanity.client';
 
 const query = groq`*[_type == "project"]{
   ...,
-  techstack[]->{title}
+  techstack[]->{_id,title}
 }`;
 
 export default async function handler(req, res) {

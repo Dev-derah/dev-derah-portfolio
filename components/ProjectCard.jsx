@@ -1,38 +1,27 @@
-/* eslint-disable react/self-closing-comp */
-
 'use client';
 
-import hoverEffect from 'hover-effect';
-import { useEffect } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import { urlFor } from '../lib/sanity.client';
+import { useHoverEffect } from '../utils/useHoverEffect';
 
 const ProjectCard = ({ project }) => {
-  useEffect(() => {
-    // eslint-disable-next-line no-unused-vars, camelcase, new-cap, no-undef
-    const image_animate = new hoverEffect({
-      parent: document.querySelector(`.${project.name}`),
-      intensity: 0.3,
-      image1: urlFor(project.image).url(),
-      image2: urlFor(project.hoverImage).url(),
-      displacementImage: './smoke.png',
-    });
-  });
+  const projectImage = useRef(null);
+  const currentImage = urlFor(project.image).url();
+  const hoverImage = urlFor(project.hoverImage).url();
+  useHoverEffect(projectImage, currentImage, hoverImage);
   return (
     <motion.div
       variants={fadeIn('right', 'tween', 0.5, 1)}
-      className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative overflow-hidden"
+      className="glassmorphism w-4/5 flex-[0.5] items-center md:h-60 md:w-[40rem]  lg:h-80 lg:max-h-[900px]  flex flex-col gap-4 h-40 md:flex-row sm:p-8 p-4 rounded-[32px] relative"
     >
       <div className="uppercase justify-center gap-2 [writing-mode:tb-rl]  text-gray-400 hidden text-xs md:flex h-[400px]">
         {project.techstack.map((tech) => (
-          <p className="tracking-widest" key={tech.title}>
-            {tech.title}
-          </p>
+          <p className="tracking-widest" key={tech._id}>{tech.title}</p>
         ))}
       </div>
-      <div className="basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]">
-        <div className={project.name}></div>
+      <div className=" diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px]" ref={projectImage}>
         {/* <Image
           src={urlFor(project.image).url()}
           height={300}
@@ -52,9 +41,7 @@ const ProjectCard = ({ project }) => {
             </h4>
           </a>
           <a href="dev-derah.vercel.app">
-            <h4 className="website_link relative text-gray-400 ">
-              Source Code
-            </h4>
+            <h4 className="website_link relative text-gray-400 ">Source Code</h4>
           </a>
         </div>
       </div>
