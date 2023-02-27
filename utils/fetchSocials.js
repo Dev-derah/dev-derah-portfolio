@@ -1,4 +1,4 @@
-export const fetchSocialss = async () => {
+export const fetchSocials = async () => {
   const res = await fetch('https://dev-derah.vercel.app/api/getSocials');
   const data = await res.json();
   const socials = data;

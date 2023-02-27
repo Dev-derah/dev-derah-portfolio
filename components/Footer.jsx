@@ -2,12 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { socials } from '../constants';
-
+import { urlFor } from '../lib/sanity.client';
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
 
-const Footer = () => (
+const Footer = ({ socials }) => (
   <motion.footer
     variants={footerVariants}
     initial="hidden"
@@ -42,14 +41,16 @@ const Footer = () => (
           <h4 className="font-extrabold text-[24px] text-white">Contact Me</h4>
           <div className="flex gap-4">
             {socials.map((social) => (
-              <Image
-                key={social.name}
-                height={24}
-                width={24}
-                src={social.url}
-                alt={social.name}
-                className="w-[24px] h-[24px] object-contain cursor-pointer"
-              />
+              <a href={social.link}>
+                <Image
+                  key={social._id}
+                  height={24}
+                  width={24}
+                  src={urlFor(social.logo).url()}
+                  alt={social.name}
+                  className="w-[24px] h-[24px] object-contain cursor-pointer"
+                />
+              </a>
             ))}
           </div>
         </div>
