@@ -41,7 +41,7 @@ const Footer = ({ socials }) => (
           <h4 className="font-extrabold text-[24px] text-white">Contact Me</h4>
           <div className="flex gap-4">
             {socials.map((social) => (
-              <a href={social.link}>
+              <a href={social.link} target="_blank" rel="noreferrer">
                 <Image
                   key={social._id}
                   height={24}

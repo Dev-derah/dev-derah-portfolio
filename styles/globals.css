@@ -216,6 +216,14 @@ color: white;
   background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
   color: #9e9e9e;
 }
-canvas{
+.diss * {
   border-radius: 32px;
+  height: 400px;
+  width:300px;
+}
+
+@media only screen and (max-width: 400px) {
+  .diss *{
+    width: 100%;
+  }
 }
