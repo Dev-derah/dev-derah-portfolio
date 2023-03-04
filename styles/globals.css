@@ -224,7 +224,9 @@ color: white;
 
 @media only screen and (max-width: 400px) {
   .diss *{
-    width: 100%;
-    height: 350px;
+    width: 100%; 
+  }
+  canvas{
+        height: 350px !important; 
   }
 }
