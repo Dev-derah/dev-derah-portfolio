@@ -218,21 +218,21 @@ color: white;
 }
 canvas {
   border-radius: 32px;
-  height: 400px;
-  width:300px;
+  height: 400px !important;
+  width:300px !important;
 }
 
 @media only screen and (max-width: 400px) {
   canvas{
-    height: 300px;
-    width: 200px;
+    height: 300px !important;
+    width: 200px !important;
   }
 }
 
 
 @media only screen and (max-width: 1024px){
     canvas{
-    max-height: 500px;
-    width: 100%;
+    max-height: 500px !important;
+    width: 100% !important;
   }
 } 
