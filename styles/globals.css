@@ -222,7 +222,7 @@ canvas {
   width:300px !important;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   canvas{
     height: 300px !important;
     width: 200px !important;
@@ -230,6 +230,17 @@ canvas {
   .badge {
     width: 3em;
     height: 4.2em;
+}
+.badge .circle {
+    width: 35px;
+    height: 50px;
+}
+.badge .ribbon {
+    width: 90px;
+    left: 50%;
+    margin-left: -45px;
+    /* margin-left: -49px; */
+    font-size: 12px;
 }
 }
 
