@@ -10,7 +10,7 @@ export const useHoverEffect = (el, img1, img2) => {
       image1: img1,
       image2: img2,
       displacementImage: './smoke.png',
-      intencity: 1,
+      intencity: 0.5,
     });
   }, [el, img1, img2]);
 };

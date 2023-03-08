@@ -18,7 +18,7 @@ const Skills = ({ skills }) => (
     >
       <TypingText title="| My Skill Set" textStyles="text-center" />
 
-      <div className="uppercase text-white grid grid-cols-2 justify-items-center gap-5 md:grid-cols-3 lg:grid-cols-4 mt-8 w-full text-center">
+      <div className="uppercase text-white grid grid-cols-2 items-center justify-items-center gap-5 md:grid-cols-3 lg:grid-cols-4 mt-8 w-full text-center">
         {skills.map((skill) => (
           <Skill key={skill._id} title={skill.title} logo={urlFor(skill.logo).url()} />
         ))}

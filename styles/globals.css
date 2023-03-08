@@ -227,6 +227,10 @@ canvas {
     height: 300px !important;
     width: 200px !important;
   }
+  .badge {
+    width: 3em;
+    height: 4.2em;
+}
 }
 
 

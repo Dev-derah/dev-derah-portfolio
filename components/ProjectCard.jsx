@@ -18,10 +18,15 @@ const ProjectCard = ({ project }) => {
     >
       <div className="uppercase justify-center gap-2 [writing-mode:tb-rl]  text-gray-400 hidden text-xs md:flex h-[400px]">
         {project.techstack.map((tech) => (
-          <p className="tracking-widest" key={tech._id}>{tech.title}</p>
+          <p className="tracking-widest" key={tech._id}>
+            {tech.title}
+          </p>
         ))}
       </div>
-      <div className="w-full diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px] sm:w-full" ref={projectImage}>
+      <div
+        className="w-full diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px] sm:w-full"
+        ref={projectImage}
+      >
         {/* <Image
           src={urlFor(project.image).url()}
           height={300}
@@ -35,13 +40,15 @@ const ProjectCard = ({ project }) => {
           {project.name}
         </h3>
         <div className="md:gap-y-4">
-          <a href={project.websiteLink}>
+          <a href={project.websiteLink} target="_blank" rel="noreferrer">
             <h4 className="website_link relative text-gray-400 my-1">
               View website
             </h4>
           </a>
-          <a href={project.githubLink}>
-            <h4 className="website_link relative text-gray-400 ">Source Code</h4>
+          <a href={project.githubLink} target="_blank" rel="noreferrer">
+            <h4 className="website_link relative text-gray-400 ">
+              Source Code
+            </h4>
           </a>
         </div>
       </div>
