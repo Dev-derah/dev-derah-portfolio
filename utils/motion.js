@@ -159,3 +159,15 @@ export const footerVariants = {
     },
   },
 };
+
+export const navContainer = {
+  exit: {
+    opacity: 0,
+    height: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.3,
+      delay: 0,
+    },
+  },
+};

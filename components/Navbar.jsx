@@ -1,11 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-
 import React, { useState } from 'react';
+import MenuButton from './MenuButton';
 import styles from '../styles';
-import { navVariants } from '../utils/motion';
+import { navContainer, navVariants } from '../utils/motion';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,20 +30,76 @@ const Navbar = () => {
           className="h-16"
           alt="Dev-Derah"
         />
-        <Image
+        <MenuButton
+          isOpen={menuOpen}
+          onClick={toggleMenu}
+          strokeWidth="3"
+          color="#ffff"
+          lineProps={{ strokeLinecap: 'round' }}
+          transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+          width="24"
+          height="16"
+          className=" cursor-pointer z-50"
+        />
+        {/* <Image
           src="/menu.svg"
           alt="menu"
           height={16}
           width={24}
-          className="w-[24px] h-16 object-contain cursor-pointer"
+          className="w-[24px] h-16 object-contain cursor-pointer z-50"
           onClick={toggleMenu}
-        />
+        /> */}
       </div>
-      {menuOpen && (
-        <div className="h-screen w-screen backdrop-blur-2xl z-40 absolute top-0 left-0" />
-      )}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            variants={navContainer}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: '100vh', opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            exit="exit"
+            className="nav-container text-white h-screen w-screen backdrop-blur-[300px] z-40 absolute top-0 left-0 overflow-hidden "
+          >
+            <nav className="flex justify-center items-center h-full w-full flex-col">
+              <motion.a
+                href="#about"
+                onClick={toggleMenu}
+                className={`${styles.navItems}`}
+              >
+                About
+              </motion.a>
+              <motion.a
+                href="#projects"
+                onClick={toggleMenu}
+                className={`${styles.navItems}`}
+              >
+                Projects
+              </motion.a>
+              <motion.a
+                href="#contact"
+                onClick={toggleMenu}
+                className={`${styles.navItems}`}
+              >
+                Contact
+              </motion.a>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
 
 export default Navbar;
+
+// initial={{ y: 90, opacity: 0 }}
+// animate={{ y: 0, opacity: 1 }}
+// transition={{ duration: 0.4 }}
+// exit={{
+//   opacity: 0,
+//   y: 90,
+//   transition: {
+//     ease: 'easeInOut',
+//     delay: 0.5,
+//   },
+// }}

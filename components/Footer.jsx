@@ -20,6 +20,7 @@ const Footer = ({ socials }) => {
       initial="hidden"
       whileInView="show"
       className={`${styles.xPaddings} py-8 relative`}
+      id="contact"
     >
       <div className="footer-gradient" />
       <div className={`${styles.innerWidth} flex flex-col gap-8 `}>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from '../styles';
 import { fadeIn, staggerContainer, textVariant } from '../utils/motion';
@@ -34,7 +35,9 @@ const Hero = () => (
         className={`${styles.heroImage} absolute h-[90vh] w-screen md:-mt-[100px] -mt-[12px] bottom-4 lg:mx-auto`}
       >
         <div className="absolute w-11/12 h-[17em] hero-gradient rounded-tl-[140px]  z-[10] bottom-[1rem] right-0 2xl:bottom-20 " />
-        <img
+        <Image
+          height={100}
+          width={400}
           src="/dev-derah.png"
           alt="dev-derah"
           className=" absolute bottom-[1rem] h-[55%] z-10 right-1/2 translate-x-1/2 object-cover her0-image 2xl:bottom-20"

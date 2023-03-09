@@ -9,7 +9,7 @@ import styles from '../styles';
 import { ProjectCard, TitleText, TypingText } from '../components';
 
 const Projects = ({ projects }) => (
-  <section className={`${styles.paddings}`} id="explore">
+  <section className={`${styles.paddings}`} id="project">
     <motion.div
       variants={staggerContainer}
       initial="hidden"
