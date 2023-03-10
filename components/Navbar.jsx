@@ -41,14 +41,6 @@ const Navbar = () => {
           height="16"
           className=" cursor-pointer z-50"
         />
-        {/* <Image
-          src="/menu.svg"
-          alt="menu"
-          height={16}
-          width={24}
-          className="w-[24px] h-16 object-contain cursor-pointer z-50"
-          onClick={toggleMenu}
-        /> */}
       </div>
       <AnimatePresence>
         {menuOpen && (
@@ -67,6 +59,13 @@ const Navbar = () => {
                 className={`${styles.navItems}`}
               >
                 About
+              </motion.a>
+              <motion.a
+                href="#skills"
+                onClick={toggleMenu}
+                className={`${styles.navItems}`}
+              >
+                Skills
               </motion.a>
               <motion.a
                 href="#projects"

@@ -8,7 +8,7 @@ import Skill from '../components/Skill';
 import { urlFor } from '../lib/sanity.client';
 
 const Skills = ({ skills }) => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section className={`${styles.paddings} relative z-10`} id="skills">
     <motion.div
       variants={staggerContainer}
       initial="hidden"

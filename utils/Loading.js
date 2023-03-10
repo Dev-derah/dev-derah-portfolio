@@ -1,12 +1,13 @@
-import { Bars } from 'react-loader-spinner';
+import { Grid } from 'react-loader-spinner';
 
 const Loading = () => (
   <div className="loader h-screen flex justify-center items-center bg-primary-black">
-    <Bars
+    <Grid
       height="80"
       width="80"
       color="#34acc7"
-      ariaLabel="bars-loading"
+      ariaLabel="grid-loading"
+      radius="12.5"
       wrapperStyle={{}}
       wrapperClass=""
       visible
