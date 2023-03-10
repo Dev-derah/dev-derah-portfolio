@@ -81,6 +81,13 @@ const Navbar = () => {
               >
                 Contact
               </motion.a>
+              <button
+                type="button"
+                className="flex items-center bg-gradient-to-r from-[#34acc7] to-[#a134c7] px-6 py-4 rounded-full font-bold"
+              >
+                <img src="/download.png" className="h-8 w-8 mr-2" />
+                Resume
+              </button>
             </nav>
           </motion.div>
         )}

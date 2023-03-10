@@ -15,7 +15,7 @@ const styles = {
 
   // nav styles
   navItems:
-    'transition p-6 text-xl font-bold md:p-10 font-2xl hover:text-[#7aebfb] hover:scale-150',
+    'transition p-6 text-xl font-bold md:p-10 font-2xl hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#34acc7] to-[#a134c7] hover:scale-150',
   // hero section
   heroHeading:
     'font-bold lg:text-[120px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[130px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white',
