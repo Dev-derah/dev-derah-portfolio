@@ -1,10 +1,9 @@
-import { Footer, Navbar } from '../components';
+import Footer from '../components';
 import { About, Projects, Hero } from '../sections';
 
 const Page = () => (
   <div className="bg-primary-black">
     <div className=" h-screen">
-      <Navbar />
       <Hero />
     </div>
     <div className="relative">

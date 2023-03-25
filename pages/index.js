@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Footer, Navbar } from '../components';
+import Footer from '../components/Footer';
 import { About, Projects, Hero, Skills } from '../sections';
 import { fetchProjecsts } from '../utils/fetchProjects';
 import { fetchSkills } from '../utils/fetchSkills';
@@ -20,7 +20,6 @@ const Home = ({ skills, projects, socials }) => {
         <Loading />
       ) : (
         <div className="bg-primary-black overflow-x-hidden">
-          <Navbar />
           <Hero />
           <div className="relative">
             <About className="overflow-hidden" />
