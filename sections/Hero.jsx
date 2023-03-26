@@ -11,7 +11,7 @@ const Hero = () => (
   <>
     <Navbar />
     <section
-      className={`${styles.yPaddings} h-[85vh] md:py-6 hero-section`}
+      className={`${styles.yPaddings} h-[90vh] md:py-6 hero-section`}
     >
       <motion.div
         variants={staggerContainer}

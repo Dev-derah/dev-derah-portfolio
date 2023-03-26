@@ -11,7 +11,7 @@ const Home = ({ skills, projects, socials }) => {
   useEffect(() => {
     setTimeout(() => {
       setisloading(false);
-    }, 2500);
+    }, 2700);
   });
 
   return (

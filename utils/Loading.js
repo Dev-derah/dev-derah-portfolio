@@ -1,7 +1,7 @@
 import { Grid } from 'react-loader-spinner';
 
 const Loading = () => (
-  <div className="loader h-screen flex justify-center items-center bg-primary-black">
+  <div className="loader h-screen w-screen flex justify-center items-center bg-primary-black">
     <Grid
       height="80"
       width="80"

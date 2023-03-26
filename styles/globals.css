@@ -14,6 +14,9 @@ body > * {
   overflow-x: hidden;
 }
 
+.loader{
+  height: 100vh;
+}
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
@@ -28,7 +31,7 @@ body > * {
   filter: blur(125px);
 }
 .nav-container {
-  background: rgba(123, 158, 234, 0.1) 74%;
+  background:#1a232e29;;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
@@ -38,10 +41,7 @@ body > * {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: #318dfe00;
-  background: hsla(191, 59%, 49%, 0.1);
-  box-shadow: inset 20px -20px 22px rgba(255, 250, 250, 0.449),
-    inset 40px -40px 44px #a8ceffad;
+  background: rgba(126, 3, 170, 0.2);
 }
 
 .btn {
