@@ -20,7 +20,9 @@ const Home = ({ skills, projects, socials }) => {
         <Loading />
       ) : (
         <div className="bg-primary-black overflow-x-hidden overflow-y-scroll">
-          <Hero />
+          <div>
+            <Hero />
+          </div>
           <div className="relative">
             <About className="overflow-hidden" />
             <Skills skills={skills} />
