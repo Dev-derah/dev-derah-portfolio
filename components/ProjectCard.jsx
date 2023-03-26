@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
       <div
-        className="w-full diss basis-2/4 md:h-[400px] md:w-[300px] max-w-[500px] sm:w-full"
+        className="w-full diss basis-2/4  md:h-[400px] md:w-[300px] max-w-[500px] sm:w-full"
         ref={projectImage}
       >
         {/* <Image

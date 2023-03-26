@@ -50,7 +50,7 @@ const Navbar = () => {
             animate={{ height: '100vh', opacity: 1 }}
             transition={{ duration: 0.3 }}
             exit="exit"
-            className="nav-container text-white h-4/5 w-[70%] backdrop-blur-[80px] z-40 absolute top-0 right-0 overflow-hidden md:w-[35%] "
+            className="nav-container text-white h-4/5 w-[70%] backdrop-blur-[80px] z-40 absolute top-0 right-0 overflow-hidden md:w-[30%] "
           >
             <nav className="flex justify-center items-end h-full w-full flex-col">
               <motion.a
@@ -84,7 +84,7 @@ const Navbar = () => {
               <a
                 href="/Chidera_Onyegbule_Resume.pdf"
                 download
-                className="flex items-center bg-[#34acc7] px-6 py-4 rounded-full  font-bold mr-2"
+                className="flex btn items-center bg-[#34acc7] px-6 py-4 rounded-full  font-bold mr-2"
               >
                 <img src="/download.png" className="h-8 w-8 mr-2" />
                 Resume
