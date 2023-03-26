@@ -12,13 +12,13 @@ const Hero = () => (
     <Navbar />
     <section
       className={`${styles.yPaddings} h-[90vh] md:py-6 hero-section`}
+      id="hero"
     >
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className=""
       >
         <div className="z-40 flex justify-center items-center flex-col">
           <motion.div

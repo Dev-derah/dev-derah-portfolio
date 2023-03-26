@@ -17,7 +17,8 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative `}
+      className={`${styles.xPaddings} py-8 relative`}
+      id="footer"
     >
       <div className="absolute w-[50%] inset-0 gradient-01 z-50" />
       <div
@@ -50,7 +51,7 @@ const Navbar = () => {
             animate={{ height: '100vh', opacity: 1 }}
             transition={{ duration: 0.3 }}
             exit="exit"
-            className="nav-container text-white h-4/5 w-screen backdrop-blur-[80px] z-40 absolute top-0 right-0 overflow-hidden  "
+            className="nav-container text-white h-4/5 w-screen backdrop-blur-[80px] z-40 absolute top-0 right-0 "
           >
             <nav className="flex justify-center items-center h-full w-full flex-col">
               <motion.a

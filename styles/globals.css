@@ -7,12 +7,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Eudoxus Sans", sans-serif;
-  scroll-behavior: smooth;
 }
 
-body > * {
-  overflow-x: hidden;
-}
+
 
 .loader{
   height: 100vh;
@@ -244,9 +241,9 @@ body > * {
 
 .footer-gradient {
   position: absolute;
-  width: 500px;
+  width: 200px;
   height: 100px;
-  left: 37%;
+  left: 0;
   bottom: 0;
 
   background: #65c4fa;

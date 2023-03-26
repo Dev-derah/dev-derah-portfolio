@@ -19,12 +19,12 @@ const Home = ({ skills, projects, socials }) => {
       {isloading ? (
         <Loading />
       ) : (
-        <div className="bg-primary-black overflow-x-hidden overflow-y-scroll">
+        <div className="bg-primary-black w-screen scroll-smooth">
           <div>
             <Hero />
           </div>
-          <div className="relative">
-            <About className="overflow-hidden" />
+          <div className="relative overflow-x-hidden">
+            <About />
             <Skills skills={skills} />
             <Projects projects={projects} />
           </div>
